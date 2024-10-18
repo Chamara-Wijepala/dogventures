@@ -2,6 +2,7 @@ const openNavBtn = document.getElementById('open-nav-btn');
 const closeNavBtn = document.getElementById('close-nav-btn');
 const mobileNav = document.getElementById('mobile-nav');
 const imageSlider = document.getElementById('image-slider');
+const accordionPanels = document.querySelectorAll('.accordion-panel');
 
 let isDragging = false;
 let startX, startScrollLeft;
@@ -35,9 +36,26 @@ function dragStop() {
 	imageSlider.classList.remove('select-none');
 }
 
+function toggleAccordionPanel(panelButton, panelBody) {
+	panelButton.firstElementChild.classList.toggle('hidden');
+	panelButton.lastElementChild.classList.toggle('hidden');
+
+	panelBody.classList.toggle('grid-rows-[0fr]');
+	panelBody.classList.toggle('grid-rows-[1fr]');
+}
+
 openNavBtn.addEventListener('click', toggleMobileNav);
 closeNavBtn.addEventListener('click', toggleMobileNav);
 
 imageSlider.addEventListener('mousemove', dragSlider);
 imageSlider.addEventListener('mousedown', dragStart);
 imageSlider.addEventListener('mouseup', dragStop);
+
+accordionPanels.forEach((panel) => {
+	const panelButton = panel.children[1];
+	const panelBody = panel.children[2];
+
+	panelButton.addEventListener('click', () =>
+		toggleAccordionPanel(panelButton, panelBody)
+	);
+});
