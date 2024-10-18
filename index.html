@@ -92,6 +92,39 @@
         </button>
       </div>
     </section>
+
+    <section id="tours" class="bg-accent-400 py-14 md:py-24">
+      <div class="max-w-[77.5rem] mx-auto  relative">
+        <h3 class="text-4xl md:text-5xl px-4 mb-10">Tail driven <br> <span class="text-primary-500">adventures await</span></h3>
+
+        <div id="drag-indicator" class="absolute hidden md:flex justify-center items-center gap-5 bg-accent-alt-400 rounded-full w-[180px] aspect-square right-0 top-0 z-50">
+          <img src="./assets/icons/caret-left.svg">
+          Drag
+          <img src="./assets/icons/caret-right.svg">
+        </div>
+
+        <div id="image-slider" class="grid gap-4 grid-flow-col auto-cols-[16.875rem] md:auto-cols-[24rem] overflow-x-auto px-4 cursor-grab">
+          <div><img src="./assets/images/team-1.png" draggable="false"></div>
+          <div><img src="./assets/images/team-2.png" draggable="false"></div>
+          <div class="bg-[url(./assets/images/team-3.png)] bg-no-repeat bg-cover bg-center text-secondary-200 max-w-[24rem] rounded-[52px] overflow-hidden">
+            <div class="backdrop-blur-lg h-full flex flex-col justify-center p-4 md:p-8">
+              <h4 class="text-xl md:text-4xl">Coastal canine getaway</h4>
+              <p class="text-secondary-100 text-xl md:text-4xl">The Baltic Sea</p>
+
+              <p class="my-4">
+                Let your dog's excitement match the rhythm of the waves as you create unforgettable memories together. Enjoy long walks on sandy beaches, splash in the refreshing waves, and unwind in dog-friendly accommodations.
+              </p>
+
+              <button class="hidden md:flex items-center gap-3">
+                <img src="./assets/icons/paw-alt.svg"> Apply
+              </button>
+            </div>
+            <!-- <img src="./assets/images/team-3.png" draggable="false"> -->
+          </div>
+          <div><img src="./assets/images/team-4.png" draggable="false"></div>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 
