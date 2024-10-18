@@ -639,6 +639,11 @@ video {
   margin-bottom: 1rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
 }
@@ -661,6 +666,14 @@ video {
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mb-9 {
+  margin-bottom: 2.25rem;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
 }
 
 .inline-block {
@@ -705,6 +718,10 @@ video {
 
 .min-w-\[13rem\] {
   min-width: 13rem;
+}
+
+.min-w-full {
+  min-width: 100%;
 }
 
 .max-w-\[36\.25rem\] {
@@ -769,6 +786,12 @@ video {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .auto-cols-\[25rem\] {
@@ -837,6 +860,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-items-center {
+  justify-items: center;
 }
 
 .gap-12 {
@@ -977,6 +1004,10 @@ video {
   border-color: hsl(21 100% 68% / var(--tw-border-opacity));
 }
 
+.border-primary-500 {
+  border-color: hsla(176, 44%, 6%, 0.5);
+}
+
 .bg-accent-alt-400 {
   --tw-bg-opacity: 1;
   background-color: hsl(21 100% 68% / var(--tw-bg-opacity));
@@ -1054,6 +1085,21 @@ video {
   padding-bottom: 6rem;
 }
 
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .pl-4 {
   padding-left: 1rem;
 }
@@ -1099,6 +1145,11 @@ video {
   line-height: 2rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .font-semibold {
   font-weight: 600;
 }
@@ -1133,6 +1184,11 @@ video {
 .text-secondary-200 {
   --tw-text-opacity: 1;
   color: hsl(300 100% 98% / var(--tw-text-opacity));
+}
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .backdrop-blur-sm {
@@ -1223,8 +1279,16 @@ video {
     margin-bottom: 6rem;
   }
 
+  .md\:mb-24 {
+    margin-bottom: 6rem;
+  }
+
   .md\:flex {
     display: flex;
+  }
+
+  .md\:grid {
+    display: grid;
   }
 
   .md\:hidden {
@@ -1233,6 +1297,10 @@ video {
 
   .md\:auto-cols-\[24rem\] {
     grid-auto-columns: 24rem;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -1255,8 +1323,37 @@ video {
     gap: 1.25rem;
   }
 
+  .md\:gap-x-20 {
+    -moz-column-gap: 5rem;
+         column-gap: 5rem;
+  }
+
+  .md\:rounded-2xl {
+    border-radius: 1rem;
+  }
+
+  .md\:rounded-3xl {
+    border-radius: 1.5rem;
+  }
+
+  .md\:rounded-full {
+    border-radius: 9999px;
+  }
+
+  .md\:rounded-\[2rem\] {
+    border-radius: 2rem;
+  }
+
+  .md\:rounded-\[4rem\] {
+    border-radius: 4rem;
+  }
+
   .md\:p-8 {
     padding: 2rem;
+  }
+
+  .md\:p-20 {
+    padding: 5rem;
   }
 
   .md\:py-24 {

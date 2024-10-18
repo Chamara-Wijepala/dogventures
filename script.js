@@ -3,6 +3,7 @@ const closeNavBtn = document.getElementById('close-nav-btn');
 const mobileNav = document.getElementById('mobile-nav');
 const imageSlider = document.getElementById('image-slider');
 const accordionPanels = document.querySelectorAll('.accordion-panel');
+const contactForm = document.getElementById('contact-form');
 
 let isDragging = false;
 let startX, startScrollLeft;
@@ -59,3 +60,5 @@ accordionPanels.forEach((panel) => {
 		toggleAccordionPanel(panelButton, panelBody)
 	);
 });
+
+contactForm.addEventListener('submit', (e) => e.preventDefault());
