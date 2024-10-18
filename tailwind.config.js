@@ -11,6 +11,9 @@ module.exports = {
 			'accent-400': 'hsl(181, 79%, 58%)',
 			'accent-alt-400': 'hsl(21, 100%, 68%)',
 		},
+		fontFamily: {
+			manrope: ['Manrope', 'sans-serif'],
+		},
 		extend: {},
 	},
 	plugins: [],
