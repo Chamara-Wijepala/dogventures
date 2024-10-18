@@ -8,15 +8,39 @@
   <title>DogVentures</title>
 </head>
 
-<body>
-  <h2 class="text-blue-500 font-manrope">Hello, World!</h2>
-  <p class="text-primary-900">primary-900</p>
-  <p class="text-primary-500">primary-500</p>
-  <p class="text-primary-300">primary-300</p>
-  <p class="text-secondary-200 bg-primary-900">secondary-200</p>
-  <p class="text-secondary-100 bg-primary-900">secondary-100</p>
-  <p class="text-accent-400">accent-400</p>
-  <p class="text-accent-alt-400">accent-alt-400</p>
+<body class="bg-secondary-200 text-primary-900">
+  <header>
+    <div class="px-4 py-1 max-w-[77.5rem] mx-auto flex justify-between">
+      <h1 class="flex items-center">Dog <img src="./assets//icons/paw-full.svg"> Ventures</h1>
+
+      <nav class="hidden sm:flex items-center gap-12 ">
+        <a href="#about">About us</a>
+        <a href="#tours">Tours</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Apply</a>
+      </nav>
+
+      <button id="open-nav-btn" class="sm:hidden">
+        <img src="./assets/icons/Menu.svg">
+      </button>
+
+      <!-- Added duration-0 to prevent mobile nav from sliding offscreen on page load -->
+      <div id="mobile-nav" class="absolute inset-0 bg-secondary-200 flex flex-col gap-16 p-4 transform translate-x-full transition-transform duration-0 sm:hidden">
+        <button id="close-nav-btn" class="self-end">
+          <img src="./assets/icons/icons8-close.svg">
+        </button>
+
+        <nav class="flex flex-col items-center gap-12">
+          <a href="#about">About us</a>
+          <a href="#tours">Tours</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Apply</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 </body>
+
+<script src="./script.js"></script>
 
 </html>
