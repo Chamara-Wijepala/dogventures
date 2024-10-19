@@ -1,12 +1,9 @@
+/*
+Mobile navigation
+*/
 const openNavBtn = document.getElementById('open-nav-btn');
 const closeNavBtn = document.getElementById('close-nav-btn');
 const mobileNav = document.getElementById('mobile-nav');
-const imageSlider = document.getElementById('image-slider');
-const accordionPanels = document.querySelectorAll('.accordion-panel');
-const contactForm = document.getElementById('contact-form');
-
-let isDragging = false;
-let startX, startScrollLeft;
 
 function toggleMobileNav() {
 	mobileNav.classList.toggle('translate-x-full');
@@ -14,6 +11,17 @@ function toggleMobileNav() {
 	// duration-0 was applied to prevent mobile nav from sliding offscreen at start
 	mobileNav.classList.remove('duration-0');
 }
+
+openNavBtn.addEventListener('click', toggleMobileNav);
+closeNavBtn.addEventListener('click', toggleMobileNav);
+
+/*
+Image slider
+*/
+const imageSlider = document.getElementById('image-slider');
+
+let isDragging = false;
+let startX, startScrollLeft;
 
 function dragSlider(e) {
 	if (!isDragging) return;
@@ -37,6 +45,15 @@ function dragStop() {
 	imageSlider.classList.remove('select-none');
 }
 
+imageSlider.addEventListener('mousemove', dragSlider);
+imageSlider.addEventListener('mousedown', dragStart);
+imageSlider.addEventListener('mouseup', dragStop);
+
+/*
+Accordion
+*/
+const accordionPanels = document.querySelectorAll('.accordion-panel');
+
 function toggleAccordionPanel(panelButton, panelBody) {
 	panelButton.firstElementChild.classList.toggle('hidden');
 	panelButton.lastElementChild.classList.toggle('hidden');
@@ -44,13 +61,6 @@ function toggleAccordionPanel(panelButton, panelBody) {
 	panelBody.classList.toggle('grid-rows-[0fr]');
 	panelBody.classList.toggle('grid-rows-[1fr]');
 }
-
-openNavBtn.addEventListener('click', toggleMobileNav);
-closeNavBtn.addEventListener('click', toggleMobileNav);
-
-imageSlider.addEventListener('mousemove', dragSlider);
-imageSlider.addEventListener('mousedown', dragStart);
-imageSlider.addEventListener('mouseup', dragStop);
 
 accordionPanels.forEach((panel) => {
 	const panelButton = panel.children[1];
@@ -60,5 +70,10 @@ accordionPanels.forEach((panel) => {
 		toggleAccordionPanel(panelButton, panelBody)
 	);
 });
+
+/*
+Contact form
+*/
+const contactForm = document.getElementById('contact-form');
 
 contactForm.addEventListener('submit', (e) => e.preventDefault());
